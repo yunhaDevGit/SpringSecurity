@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:4000/security?serverTimezone=Asia/Seoul
+    username: security
+    password: security
+
+#  pom.xml에 mustache 의존성을 추가해줬기 때문에 자동으로 기본 경로가 잡히고
+#  뷰 리졸버 경로도 기본으로 등록되기 때문에 생략 가능
+#  mvc:
+#    view:
+#      prefix: /templates/
+#      suffix: .mustache
+
+  jpa:
+    hibernate:
+      ddl-auto: create #create update none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
