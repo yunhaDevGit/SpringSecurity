@@ -28,6 +28,8 @@ public class IndexController {
   public @ResponseBody String testLogin(Authentication authentication,
       @AuthenticationPrincipal PrincipalDetails userDetails){
     System.out.println("/test/login ========");
+    // Authentication 객체 안에 principal 객체가 있다.
+    // principal을 리턴 타임이 object이므로 PrincipalDetails로 down casting
     PrincipalDetails principalDetails = (PrincipalDetails)authentication.getPrincipal();
     System.out.println("authentication : "+ principalDetails.getUser());
 
@@ -37,7 +39,7 @@ public class IndexController {
 
   @GetMapping("/test/oauth/login")
   public @ResponseBody String testOAuthLogin(Authentication authentication,
-      @AuthenticationPrincipal OAuth2User oAuth){
+                                             @AuthenticationPrincipal OAuth2User oAuth){
     System.out.println("/test/oauth/login ========");
     OAuth2User oAuth2User = (OAuth2User)authentication.getPrincipal();
     System.out.println("authentication : " + oAuth2User.getAttributes());
@@ -53,6 +55,7 @@ public class IndexController {
   public String index(){
     return "index"; // src/main/resources/templates/index.mustache
   }
+
 
   @GetMapping("/user")
   public @ResponseBody String user(@AuthenticationPrincipal PrincipalDetails principalDetails) {

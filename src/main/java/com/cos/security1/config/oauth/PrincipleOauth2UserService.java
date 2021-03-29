@@ -22,12 +22,16 @@ public class PrincipleOauth2UserService extends DefaultOAuth2UserService {
 
   @Override
   public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
+
+    // registrationId로 어떤 OAuth로 로그인했는지 확인할 수 있다
     System.out.println("getClientRegistration : "+userRequest.getClientRegistration());
     System.out.println("getAccessToken : "+userRequest.getAccessToken());
 
     OAuth2User oAuth2User = super.loadUser(userRequest);
     System.out.println("getAttributes : "+ oAuth2User.getAttributes());
 
+    // 회원가입 진행
+    // username, password 둘 다 필요 없는데 그냥 만들어 주는 거다
     String provider = userRequest.getClientRegistration().getClientId();
     String providerId = oAuth2User.getAttribute("sub");
     String username = provider+"_"+providerId;
