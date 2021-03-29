@@ -9,8 +9,8 @@ server:
 
 spring:
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:4000/security?serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security?serverTimezone=Asia/Seoul
     username: security
     password: security
 
@@ -28,9 +28,9 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
 #    pom.xml에 spring-boot-starter-data-jpa 의존성 추가 해주고
-#    application.yml에 jpa 설정해주면, db table을 자동으로 만들어준다
-#    > ddl-auto: create - table이 있다면, 지우고 다시 만든다
-#    > ddl-auto: update - table이 있다면, 거기에 업데이트
+      ##    application.yml에 jpa 설정해주면, db table을 자동으로 만들어준다
+    ##    > ddl-auto: create - table이 있다면, 지우고 다시 만든다
+    ##    > ddl-auto: update - table이 있다면, 거기에 업데이트
 
   security:
     oauth2:
