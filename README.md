@@ -14,7 +14,7 @@
 
 다음과 같은 순서로 진행되었습니다. 각 과정에 대한 자세한 설명은 아래 Repository에서 확인하실 수 있습니다.
 
-<img src="https://github.githubassets.com/images/modules/open_graph/github-mark.png" width="30" height="30">https://github.com/yunhaDevGit/TIL.git
+<img src="https://github.githubassets.com/images/modules/open_graph/github-mark.png" width="30" height="15">https://github.com/yunhaDevGit/TIL.git
 
 
 
