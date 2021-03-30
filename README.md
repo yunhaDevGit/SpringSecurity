@@ -18,9 +18,9 @@
 
 
 
-유튜버 데어 프로그래밍의 스프링 부트 시큐리티 강좌를 바탕으로 실습한 내용입니다.
+유튜버 데어 프로그래밍의 스프링 부트 시큐리티 강좌를 바탕으로 실습한 내용입니다.<br/><br/>
 
-[참고]:https://github.com/yunhaDevGit/SpringSecurity.git	"스프링 부트 시큐리티 "
+참고 : https://www.youtube.com/watch?v=GEv_hw0VOxE&list=PL93mKxaRDidERCyMaobSLkvSPzYtIk0Ah
 
 
 
