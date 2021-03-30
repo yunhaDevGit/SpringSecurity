@@ -54,8 +54,8 @@ spring:
             redirect-uri: http://localhost:8080/login/oauth2/code/naver
             # 페이스북, 구글, 트위터의 redirect-uri 기본 경로가 /login/oauth2/code이기 때문에 따로 적어주지 않아도 된다
 
-          # 네이버는 OAuth2.0 공식 지원대상이 아니라서 provider 설정이 필요하다.
-          # 요청주소도 다르고, 응답 데이터도 다르기 때문이다
+        # 네이버는 OAuth2.0 공식 지원대상이 아니라서 provider 설정이 필요하다.
+        # 요청주소도 다르고, 응답 데이터도 다르기 때문이다
         provider:
           naver:
             authorization-uri: https://nid.naver.com/oauth2.0/authorize
