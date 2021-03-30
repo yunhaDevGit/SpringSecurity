@@ -1,6 +1,6 @@
 # Spring Security
 
-#### Agenda
+### Agenda
 
 1. Spring Security 설정
 
